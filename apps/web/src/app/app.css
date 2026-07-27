@@ -1,0 +1,5 @@
+/* Goal Compass - Minimal App Shell Styles */
+:host {
+  display: block;
+  min-height: 100dvh;
+}

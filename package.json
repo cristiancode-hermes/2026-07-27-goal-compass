@@ -1,0 +1,10 @@
+{
+  "name": "goal-compass",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "build:api": "cd apps/api && ../../node_modules/.bin/tsc",
+    "build:web": "node node_modules/@angular/cli/bin/ng.js build --project=web",
+    "build": "npm run build:api && npm run build:web"
+  }
+}

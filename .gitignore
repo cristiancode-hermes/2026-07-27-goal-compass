@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.sqlite
+_web_node_modules/
+_web_lock.json
+.env
+*.tsbuildinfo
+.vscode/

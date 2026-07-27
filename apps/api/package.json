@@ -1,0 +1,39 @@
+{
+  "name": "goal-compass-api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "start:dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/passport": "^11.0.0",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/swagger": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "@nestjs/mapped-types": "^2.1.0",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/typeorm": "^11.0.0",
+    "typeorm": "^1.1.0",
+    "better-sqlite3": "^11.0.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.14.1",
+    "class-transformer": "^0.5.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.0",
+    "@types/node": "^22.0.0",
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/uuid": "^10.0.0"
+  }
+}

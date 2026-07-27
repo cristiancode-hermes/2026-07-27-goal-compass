@@ -1,0 +1,55 @@
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" routerLink="/dashboard" (click)="closeMenu()">
+      <span class="brand-icon">🧭</span>
+      <span class="brand-text">Goal Compass</span>
+    </a>
+
+    <div class="nav-links" [class.nav-open]="menuOpen()">
+      @for (item of navItems; track item.path) {
+        <a
+          class="nav-link"
+          [class.active]="isActive(item.path)"
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: item.path === '/dashboard' }"
+          (click)="closeMenu()"
+        >
+          <span class="nav-icon">{{ item.icon }}</span>
+          <span>{{ item.label }}</span>
+        </a>
+      }
+    </div>
+
+    <div class="navbar-right">
+      <app-dark-mode-toggle />
+      <div class="user-menu" (click)="toggleMenu()">
+        <app-user-avatar [name]="auth.user()?.name || 'User'" [size]="34" />
+      </div>
+
+      @if (menuOpen()) {
+        <div class="user-dropdown" (click)="$event.stopPropagation()">
+          <div class="dropdown-header">
+            <app-user-avatar [name]="auth.user()?.name || 'User'" [size]="40" />
+            <div class="dropdown-user-info">
+              <span class="dropdown-name">{{ auth.user()?.name }}</span>
+              <span class="dropdown-email">{{ auth.user()?.email }}</span>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item dropdown-logout" (click)="logout()">
+            <span>🚪</span> Sign Out
+          </button>
+        </div>
+      }
+    </div>
+
+    <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+      @if (menuOpen()) {
+        <span>✕</span>
+      } @else {
+        <span>☰</span>
+      }
+    </button>
+  </div>
+</nav>

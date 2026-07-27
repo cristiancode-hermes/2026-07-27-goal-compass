@@ -1,0 +1,106 @@
+/* Goal Compass — Global Styles (Horizon Blue Theme) */
+
+/* Import Inter + JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #1B4965;
+  --color-primary-hover: #153A52;
+  --color-secondary: #62B6CB;
+  --color-secondary-hover: #4DA3B8;
+  --color-accent: #FF9F1C;
+  --color-accent-hover: #E88E0F;
+  --color-success: #2EC4B6;
+  --color-warning: #E9C46A;
+  --color-danger: #E63946;
+  --color-bg: #F8F9FA;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F0F2F5;
+  --color-text: #0D1B2A;
+  --color-text-secondary: #6C757D;
+  --color-text-muted: #ADB5BD;
+  --color-border: #DEE2E6;
+  --color-border-light: #E9ECEF;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+[data-theme="dark"] {
+  --color-bg: #0D1B2A;
+  --color-surface: #1B2838;
+  --color-surface-hover: #243447;
+  --color-text: #E9ECEF;
+  --color-text-secondary: #ADB5BD;
+  --color-text-muted: #6C757D;
+  --color-border: #2C3E50;
+  --color-border-light: #1E2D3D;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text);
+}
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code, pre, .mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(27, 73, 101, 0.15);
+  color: var(--color-primary);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
