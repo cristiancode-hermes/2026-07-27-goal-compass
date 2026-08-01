@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToastService, Toast } from './toast.service';
 
@@ -75,7 +75,7 @@ import { ToastService, Toast } from './toast.service';
   `],
 })
 export class ToastContainerComponent {
-  private readonly toastService = new ToastService();
+  private readonly toastService = inject(ToastService);
 
   protected toasts = this.toastService.toasts;
 
