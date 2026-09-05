@@ -1,10 +1,16 @@
 {
   "name": "goal-compass",
   "private": true,
-  "workspaces": ["apps/*"],
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
     "build:api": "cd apps/api && ../../node_modules/.bin/tsc",
     "build:web": "node node_modules/@angular/cli/bin/ng.js build --project=web",
-    "build": "npm run build:api && npm run build:web"
-  }
+    "build": "pnpm run build:api && pnpm run build:web"
+  },
+  "dependencies": {
+    "zone.js": "^0.16.2"
+  },
+  "packageManager": "pnpm@10.34.5"
 }
